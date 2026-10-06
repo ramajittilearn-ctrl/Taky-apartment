@@ -1,1 +1,281 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Taky's Apartment — อพาร์ตเมนต์บูติกสำหรับเช่า">
+  <title>Taky's Apartment | อพาร์ตเมนต์บูติกสำหรับเช่า</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="เมนูหลัก">
+      <a class="nav__brand" href="#top">Taky's Apartment</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="เปิด/ปิดเมนู">
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#about">เกี่ยวกับ</a></li>
+        <li><a href="#units">ห้องพัก</a></li>
+        <li><a href="#amenities">สิ่งอำนวยความสะดวก</a></li>
+        <li><a href="#location">ตำแหน่ง</a></li>
+        <li><a class="nav__cta" href="#contact">ติดต่อ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__media">
+        <img
+          src="exterior.jpg"
+          alt="อาคาร Taky's Apartment สามชั้น สีขาวตัดไม้โทนอบอุ่น พร้อมระเบียงราวลายวงกลม"
+          width="1589"
+          height="990"
+          fetchpriority="high"
+        >
+        <div class="hero__overlay" aria-hidden="true"></div>
+      </div>
+      <div class="hero__content">
+        <p class="hero__eyebrow">Boutique Apartment Rental</p>
+        <h1 id="hero-title" class="hero__title">Taky's Apartment</h1>
+        <p class="hero__tagline">อพาร์ตเมนต์บูติกสไตล์มินิมอล<br>สำหรับเช่า — อบอุ่น เรียบหรู และใกล้ชิดธรรมชาติ</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#units">ดูประเภทห้อง</a>
+          <a class="btn btn--ghost" href="#contact">สอบถามการเช่า</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section" id="about" aria-labelledby="about-title">
+      <div class="container about__grid">
+        <div class="about__intro">
+          <p class="section__eyebrow">เกี่ยวกับเรา</p>
+          <h2 id="about-title" class="section__title">ที่พักบูติกในบรรยากาศอบอุ่น</h2>
+          <p class="about__text">
+            Taky's Apartment เป็นอพาร์ตเมนต์บูติกสามชั้น ออกแบบด้วยพื้นผิวสีขาวสะอาดตา
+            ตัดด้วยไม้โทนน้ำผึ้งและรายละเอียดสีดำด้าน ให้ความรู้สึกเรียบหรู เงียบสงบ
+            และเหมาะสำหรับการอยู่อาศัยระยะยาว
+          </p>
+        </div>
+        <aside class="highlight-card" aria-label="ข้อมูลสำคัญ">
+          <h3 class="highlight-card__title">จุดเด่น</h3>
+          <ul class="highlight-card__list">
+            <li>ดีไซน์มินิมอล สไตล์บูติก</li>
+            <li>อาคารสามชั้น พร้อมระเบียง</li>
+            <li>พื้นที่สีเขียวรอบอาคาร</li>
+          </ul>
+          <div class="placeholder placeholder--inline" role="note">
+            <span class="placeholder__label">Coming soon</span>
+            <p>วันเปิดให้เช่า — เร็วๆ นี้ (กำลังก่อสร้าง)</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="units section section--muted" id="units" aria-labelledby="units-title">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">ห้องพัก</p>
+          <h2 id="units-title" class="section__title">แพ็กเกจเช่า</h2>
+          <p class="section__lead">เลือกแพ็กเกจตามระดับเฟอร์นิเจอร์ — ราคาค่าเช่ารายเดือนด้านล่าง</p>
+        </header>
+
+        <div class="card-grid">
+          <article class="unit-card">
+            <div class="unit-card__badge">Standard</div>
+            <h3 class="unit-card__title">Standard</h3>
+            <p class="unit-card__desc">ห้องเปล่า ไม่มีเฟอร์นิเจอร์</p>
+            <p class="unit-card__price">
+              <span class="unit-card__amount">2,500</span>
+              <span class="unit-card__currency">บาท/เดือน</span>
+            </p>
+            <ul class="unit-card__facts">
+              <li>21 ตร.ม.</li>
+              <li>ห้องน้ำในตัว</li>
+              <li>มีลานซักล้าง</li>
+            </ul>
+          </article>
+
+          <article class="unit-card unit-card--featured">
+            <div class="unit-card__badge">Silver</div>
+            <h3 class="unit-card__title">Silver</h3>
+            <p class="unit-card__desc">พร้อมแอร์ + เตียง</p>
+            <p class="unit-card__price">
+              <span class="unit-card__amount">3,000</span>
+              <span class="unit-card__currency">บาท/เดือน</span>
+            </p>
+            <ul class="unit-card__facts">
+              <li>21 ตร.ม.</li>
+              <li>ห้องน้ำในตัว</li>
+              <li>มีลานซักล้าง</li>
+            </ul>
+          </article>
+
+          <article class="unit-card">
+            <div class="unit-card__badge">Gold</div>
+            <h3 class="unit-card__title">Gold</h3>
+            <p class="unit-card__desc">ตกแต่งครบ</p>
+            <p class="unit-card__price">
+              <span class="unit-card__amount">3,500</span>
+              <span class="unit-card__currency">บาท/เดือน</span>
+            </p>
+            <ul class="unit-card__facts">
+              <li>21 ตร.ม.</li>
+              <li>ห้องน้ำในตัว</li>
+              <li>มีลานซักล้าง</li>
+            </ul>
+          </article>
+        </div>
+
+        <aside class="utilities" aria-labelledby="utilities-title">
+          <header class="utilities__header">
+            <h3 id="utilities-title" class="utilities__title">ค่าสาธารณูปโภค</h3>
+            <p class="utilities__lead">อัตราค่าใช้จ่ายเพิ่มเติมนอกเหนือจากค่าเช่า</p>
+          </header>
+          <ul class="utilities__list">
+            <li class="utilities__item">
+              <span class="utilities__name">ค่าไฟ</span>
+              <span class="utilities__rate">6.5 บาท/หน่วย</span>
+            </li>
+            <li class="utilities__item">
+              <span class="utilities__name">ค่าน้ำ</span>
+              <span class="utilities__rate">10 บาท/หน่วย</span>
+            </li>
+            <li class="utilities__item">
+              <span class="utilities__name">ที่จอดรถ</span>
+              <span class="utilities__rate">500 บาท/คัน/เดือน</span>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="amenities section" id="amenities" aria-labelledby="amenities-title">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">สิ่งอำนวยความสะดวก</p>
+          <h2 id="amenities-title" class="section__title">สิ่งอำนวยความสะดวก</h2>
+          <p class="section__lead">สิ่งอำนวยความสะดวกภายในอาคารและห้องพัก</p>
+        </header>
+
+        <ul class="amenity-grid amenity-grid--five">
+          <li class="amenity-card">
+            <span class="amenity-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 17h16M5 17V10l3-3h8l3 3v7M7 17v3M17 17v3M8 10h8"/><circle cx="8.5" cy="13.5" r="1"/><circle cx="15.5" cy="13.5" r="1"/></svg>
+            </span>
+            <h3 class="amenity-card__title">ที่จอดรถ</h3>
+          </li>
+          <li class="amenity-card">
+            <span class="amenity-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12.5c0-4 3-7.5 7-7.5s7 3.5 7 7.5c0 2.2-1 4.2-2.5 5.5L12 21l-4.5-3c-1.5-1.3-2.5-3.3-2.5-5.5Z"/><path d="M9.5 12.5h5M12 10v5"/></svg>
+            </span>
+            <h3 class="amenity-card__title">Wifi</h3>
+          </li>
+          <li class="amenity-card">
+            <span class="amenity-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 10h16v3a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3Z"/><path d="M6 10V8a6 6 0 0 1 12 0v2M8 15v2M16 15v2"/></svg>
+            </span>
+            <h3 class="amenity-card__title">แอร์</h3>
+          </li>
+          <li class="amenity-card">
+            <span class="amenity-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="4"/></svg>
+            </span>
+            <h3 class="amenity-card__title">พัดลม</h3>
+          </li>
+          <li class="amenity-card">
+            <span class="amenity-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19h16M6 19V8l6-4 6 4v11"/><path d="M10 19v-5h4v5"/></svg>
+            </span>
+            <h3 class="amenity-card__title">เฟอร์นิเจอร์</h3>
+            <p class="amenity-card__text">ตู้ เตียง ที่นอน (ขึ้นอยู่กับประเภทห้อง)</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="location section section--muted" id="location" aria-labelledby="location-title">
+      <div class="container location__grid">
+        <div>
+          <p class="section__eyebrow">ตำแหน่งที่ตั้ง</p>
+          <h2 id="location-title" class="section__title">พบเราบนแผนที่</h2>
+          <p class="location__address">
+            ซอยจามร ข. ตำบลคูคต อำเภอลำลูกกา จังหวัดปทุมธานี 12130
+          </p>
+          <div class="location__nearby">
+            <h3 class="location__nearby-title">สถานที่ใกล้เคียง</h3>
+            <ul class="location__nearby-list">
+              <li>อนุสรณ์สถานแห่งชาติ</li>
+              <li>เซียร์รังสิต</li>
+              <li>ฟิวเจอร์ปาร์ค รังสิต</li>
+              <li>BTS คูคต, BTS แยก คปอ.</li>
+              <li>สนามบินดอนเมือง</li>
+              <li>โรงพยาบาลภูมิพล</li>
+              <li>ห้างเซ็นทรัล รังสิต (ในอนาคต)</li>
+            </ul>
+            <p class="location__stores"><strong>ร้านสะดวกซื้อ:</strong> CJ More, 7-Eleven</p>
+          </div>
+          <a
+            class="btn btn--primary location__btn"
+            href="https://maps.app.goo.gl/F6Vs4F3PYVQgNGQ56?g_st=ic"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ดูตำแหน่งบนแผนที่
+            <span class="btn__icon" aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div class="location__map-card" aria-hidden="true">
+          <div class="location__map-inner">
+            <svg class="location__pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z"/>
+              <circle cx="12" cy="10" r="2.5"/>
+            </svg>
+            <p>Google Maps</p>
+            <p class="location__map-hint">เปิดในแท็บใหม่</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact__panel">
+        <div class="contact__copy">
+          <p class="section__eyebrow">ติดต่อเรา</p>
+          <h2 id="contact-title" class="section__title">สนใจเช่าห้อง?</h2>
+          <p class="contact__text">
+            สอบถามรายละเอียดห้องพักและแพ็กเกจเช่าได้ที่เบอร์โทรด้านล่าง
+            ช่องทาง LINE จะเพิ่มในภายหลัง
+          </p>
+        </div>
+        <div class="contact__channels">
+          <div class="contact-channel contact-channel--active">
+            <h3>โทรศัพท์</h3>
+            <a class="contact-channel__phone" href="tel:+66928255788">092-825-5788</a>
+          </div>
+          <div class="contact-channel placeholder" role="note">
+            <span class="placeholder__label">เร็วๆ นี้</span>
+            <h3>LINE</h3>
+            <p>ยังไม่ระบุ — จะเพิ่มในภายหลัง</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__brand">Taky's Apartment</p>
+      <p class="site-footer__note">เปิดให้เช่าเร็วๆ นี้ — กำลังก่อสร้าง</p>
+      <a class="site-footer__top" href="#top">กลับขึ้นด้านบน</a>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
