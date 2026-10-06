@@ -239,31 +239,39 @@ a:hover {
 /* —— Hero —— */
 .hero {
   position: relative;
-  min-height: min(88vh, 720px);
+  /* Closer to exterior.jpg aspect (~1589x990) so less of the facade is cropped */
+  min-height: min(70vh, 620px);
+  aspect-ratio: 1589 / 990;
+  max-height: min(78vh, 680px);
   display: grid;
   align-items: end;
   color: #fff;
   overflow: hidden;
+  background: #1a140c;
 }
 
 .hero__media {
   position: absolute;
   inset: 0;
+  background:
+    linear-gradient(180deg, #1a140c 0%, #2a2118 50%, #1a140c 100%);
 }
 
 .hero__media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 40%;
+  /* Show the full exterior facade; subtle letterboxing on extreme viewports */
+  object-fit: contain;
+  object-position: center center;
 }
 
 .hero__overlay {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(18, 14, 10, 0.15) 0%, rgba(18, 14, 10, 0.55) 55%, rgba(18, 14, 10, 0.78) 100%),
-    linear-gradient(90deg, rgba(18, 14, 10, 0.35) 0%, transparent 55%);
+    linear-gradient(180deg, rgba(18, 14, 10, 0.12) 0%, rgba(18, 14, 10, 0.45) 50%, rgba(18, 14, 10, 0.82) 100%),
+    linear-gradient(90deg, rgba(18, 14, 10, 0.28) 0%, transparent 55%);
+  pointer-events: none;
 }
 
 .hero__content {
@@ -304,6 +312,15 @@ a:hover {
   flex-wrap: wrap;
   gap: 0.75rem;
 }
+
+@media (max-width: 768px) {
+  .hero {
+    aspect-ratio: auto;
+    min-height: min(62vh, 520px);
+    max-height: none;
+  }
+}
+
 
 /* —— Buttons —— */
 .btn {
