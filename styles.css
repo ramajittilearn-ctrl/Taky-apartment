@@ -33,6 +33,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-h) + 0.75rem);
+  overflow-x: clip;
 }
 
 body {
@@ -43,6 +44,7 @@ body {
   color: var(--color-text);
   background: var(--color-bg);
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
 }
 
 img {
@@ -100,6 +102,7 @@ a:hover {
 }
 
 .nav {
+  position: relative;
   width: min(100% - 2rem, var(--max));
   margin-inline: auto;
   height: 100%;
@@ -162,13 +165,16 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   gap: 5px;
-  width: 2.5rem;
-  height: 2.5rem;
-  padding: 0.45rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.5rem;
   border: 1px solid var(--color-border);
   border-radius: 8px;
   background: var(--color-surface);
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .nav__toggle-bar {
@@ -181,7 +187,7 @@ a:hover {
 }
 
 .nav.is-open .nav__toggle-bar:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
 }
 
 .nav.is-open .nav__toggle-bar:nth-child(2) {
@@ -189,7 +195,7 @@ a:hover {
 }
 
 .nav.is-open .nav__toggle-bar:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 @media (max-width: 768px) {
@@ -224,14 +230,17 @@ a:hover {
   }
 
   .nav__menu a {
-    display: block;
-    padding: 0.85rem 0.5rem;
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0.75rem 0.5rem;
     border-bottom: 1px solid var(--color-border);
   }
 
   .nav__cta {
     margin-top: 0.75rem;
     justify-content: center;
+    min-height: 44px;
     border-bottom: none !important;
   }
 }
@@ -316,8 +325,21 @@ a:hover {
 @media (max-width: 768px) {
   .hero {
     aspect-ratio: auto;
-    min-height: min(62vh, 520px);
+    min-height: min(58vh, 480px);
     max-height: none;
+  }
+
+  .hero__content {
+    padding: 2.5rem 0 2rem;
+  }
+
+  .hero__title {
+    font-size: clamp(1.85rem, 8vw, 2.6rem);
+  }
+
+  .hero__actions .btn {
+    flex: 1 1 auto;
+    min-width: min(100%, 10rem);
   }
 }
 
@@ -328,7 +350,8 @@ a:hover {
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  padding: 0.8rem 1.35rem;
+  min-height: 44px;
+  padding: 0.75rem 1.35rem;
   border-radius: 999px;
   font-family: inherit;
   font-size: 0.98rem;
@@ -954,12 +977,15 @@ a:hover {
 }
 
 .contact-channel__phone {
-  display: inline-block;
-  font-size: 1.45rem;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: clamp(1.2rem, 4.5vw, 1.45rem);
   font-weight: 700;
   letter-spacing: 0.02em;
   color: #fff;
   text-decoration: none;
+  word-break: keep-all;
 }
 
 .contact-channel__phone:hover {
@@ -969,6 +995,13 @@ a:hover {
 @media (max-width: 768px) {
   .contact__panel {
     grid-template-columns: 1fr;
+    padding: 1.5rem 1.15rem;
+    border-radius: var(--radius);
+  }
+
+  .contact-channel--active,
+  .contact-channel--line {
+    padding: 1rem 0.95rem;
   }
 }
 
@@ -991,7 +1024,8 @@ a:hover {
 
 .contact-channel__qr {
   display: block;
-  width: min(100%, 220px);
+  width: min(280px, 70vw);
+  max-width: 100%;
   height: auto;
   margin: 0 auto;
   border-radius: 12px;
@@ -1010,12 +1044,16 @@ a:hover {
 }
 
 .contact-channel__line-btn {
+  display: inline-flex;
   margin-top: 0.85rem;
+  width: 100%;
+  max-width: min(280px, 70vw);
+  min-height: 44px;
   background: var(--color-wood);
   color: #1a140c;
   border-color: var(--color-wood);
-  font-size: 0.92rem;
-  padding: 0.65rem 1.1rem;
+  font-size: 0.95rem;
+  padding: 0.7rem 1.1rem;
 }
 
 .contact-channel__line-btn:hover {
@@ -1058,6 +1096,31 @@ a:hover {
 
 .site-footer__top:hover {
   color: var(--color-wood-deep);
+}
+
+
+/* —— Mobile polish (≤480px) —— */
+@media (max-width: 480px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .container {
+    width: min(100% - 1.5rem, var(--max));
+  }
+
+  .section {
+    padding: 2.75rem 0;
+  }
+
+  .unit-card__amount {
+    font-size: 1.65rem;
+  }
+
+  .site-footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 /* —— Reduced motion —— */
