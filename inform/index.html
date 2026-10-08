@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>แจ้งชำระเงิน — Taky's Apartment</title>
+  <meta name="description" content="แจ้งชำระค่าเช่า Taky's Apartment / Inform payment">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #faf9f7;
+      --surface: #ffffff;
+      --muted: #f3f0eb;
+      --text: #1a1a1a;
+      --text-soft: #4a463f;
+      --text-muted: #7a746a;
+      --wood: #c49a5c;
+      --wood-deep: #a67a3d;
+      --wood-soft: #e8d4b3;
+      --border: #e5e0d8;
+      --shadow: 0 8px 30px rgba(28, 28, 28, 0.06);
+      --radius: 14px;
+      --font: "Sarabun", "Noto Sans Thai", "Thonburi", "Tahoma", system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: var(--font);
+      color: var(--text);
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      -webkit-font-smoothing: antialiased;
+    }
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 2rem 1.75rem 1.75rem;
+      text-align: center;
+    }
+    .brand {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--wood-deep);
+      font-weight: 600;
+      margin: 0 0 0.75rem;
+    }
+    h1 {
+      margin: 0 0 0.35rem;
+      font-size: 1.65rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    .en {
+      margin: 0 0 1.5rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+    .hint {
+      margin: 0 0 1.5rem;
+      font-size: 0.95rem;
+      color: var(--text-soft);
+      line-height: 1.6;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 0.95rem 1.25rem;
+      border-radius: 12px;
+      font-family: inherit;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
+      transition: background 0.2s ease, transform 0.15s ease;
+    }
+    .btn-primary {
+      background: var(--wood);
+      color: #1c1c1c;
+      border: none;
+      margin-bottom: 0.85rem;
+    }
+    .btn-primary:hover {
+      background: var(--wood-deep);
+      color: #fff;
+    }
+    .btn-primary .sub {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 500;
+      opacity: 0.85;
+      margin-top: 0.15rem;
+    }
+    .btn-secondary {
+      background: var(--muted);
+      color: var(--text-soft);
+      border: 1px solid var(--border);
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 0.75rem 1rem;
+    }
+    .btn-secondary:hover {
+      background: var(--wood-soft);
+      color: var(--text);
+    }
+    .btn-secondary .sub {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.1rem;
+    }
+    footer {
+      margin-top: 1.25rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <p class="brand">Taky's Apartment</p>
+    <h1>แจ้งชำระเงิน</h1>
+    <p class="en">Inform payment</p>
+    <p class="hint">กรุณากรอกแบบฟอร์มหลังโอนเงินเรียบร้อยแล้ว<br>Please submit the form after your transfer.</p>
+    <a class="btn btn-primary"
+       href="https://docs.google.com/forms/d/e/1FAIpQLSeFk9djViV0vqZQM067Zvekph__pbNub622TlDq133EQwYBng/viewform"
+       target="_blank" rel="noopener noreferrer">
+      แจ้งชำระเงิน
+      <span class="sub">Inform payment → Form</span>
+    </a>
+    <a class="btn btn-secondary"
+       href="https://docs.google.com/forms/d/e/1FAIpQLSdLffarF0HYh5NaU0Pk53DI294LWHMtPSo1vtZIdK3tVxLmgw/viewform"
+       target="_blank" rel="noopener noreferrer">
+      ลงทะเบียนผู้เช่า
+      <span class="sub">Tenant registration</span>
+    </a>
+    <footer>ลิงก์นี้เปิดแบบฟอร์ม Google Forms ของหอพัก</footer>
+  </main>
+</body>
+</html>
