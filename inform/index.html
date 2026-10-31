@@ -75,6 +75,26 @@
       color: var(--text-soft);
       line-height: 1.6;
     }
+    .due-box {
+      margin: 0 0 1.35rem;
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      background: var(--muted);
+      border: 1px solid var(--wood-soft);
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.55;
+    }
+    .due-box strong {
+      color: var(--wood-deep);
+      font-weight: 700;
+    }
+    .due-box .due-en {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
     .btn {
       display: block;
       width: 100%;
@@ -135,6 +155,10 @@
     <h1>แจ้งชำระเงิน</h1>
     <p class="en">Inform payment</p>
     <p class="hint">กรุณากรอกแบบฟอร์มหลังโอนเงินเรียบร้อยแล้ว<br>Please submit the form after your transfer.</p>
+    <div class="due-box">
+      ออกบิลวันที่ 25 · <strong>ครบกำหนดชำระวันที่ 5 ของเดือนถัดไป</strong>
+      <span class="due-en">Billed on the 25th · Due by the 5th of the next month</span>
+    </div>
     <a class="btn btn-primary"
        href="https://docs.google.com/forms/d/e/1FAIpQLSeFk9djViV0vqZQM067Zvekph__pbNub622TlDq133EQwYBng/viewform"
        target="_blank" rel="noopener noreferrer">
